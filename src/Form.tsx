@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Slider, Pagination, Table, ProgressBar, TableBody, TableCell, TableRow, TableHead, TableHeader, Button, Breadcrumb, BreadcrumbItem, ButtonSkeleton, ButtonSet, Tag, FormGroup, Checkbox, Form, FileUploader, NumberInput, RadioButton, RadioButtonGroup, Search, Select, SelectItem, TextArea, TextInput, Stack } from '@carbon/react';
+import { Slider, PaginationNav, Table, ProgressBar, TableBody, TableCell, TableRow, TableHead, TableHeader, Button, Breadcrumb, BreadcrumbItem, ButtonSkeleton, ButtonSet, Tag, FormGroup, Checkbox, Form, FileUploader, NumberInput, RadioButton, RadioButtonGroup, Search, Select, SelectItem, TextArea, TextInput, Stack } from '@carbon/react';
 
 const checkboxEvents = {
   className: 'some-class',
@@ -82,7 +82,7 @@ export const FormExample = () => (
       <BreadcrumbItem>Breadcrumb 4</BreadcrumbItem>
     </Breadcrumb>
     <Stack gap={7}>
-      <FormGroup>
+      <FormGroup legendText={''}>
         <Tag className="some-class" type="red" title="Clear Filter">
           {'Tag content'}
         </Tag>
@@ -136,7 +136,7 @@ export const FormExample = () => (
         <RadioButton value="disabled" labelText="Disabled Radio Button" id="radio-4" disabled {...radioProps} />
       </RadioButtonGroup>
       <FormGroup {...fieldsetSearchProps}>
-        <Search {...searchProps} id="search-1" labelText="Search" placeholder="Search" />
+        <Search size="md"  id="search-1" labelText="Search" placeholder="Search" />
       </FormGroup>
       <Select {...selectProps} id="select-1" defaultValue="placeholder-item">
         <SelectItem disabled hidden value="placeholder-item" text="Choose an option" />
@@ -221,7 +221,7 @@ export const FormExample = () => (
           </TableRow>
         </TableBody>
       </Table>
-      <Pagination backwardText="Previous page" forwardText="Next page" itemsPerPageText="Items per page:" onChange={function noRefCheck() {}} page={1} pageSize={10} pageSizes={[10, 20, 30, 40, 50]} size="md" totalItems={103} />
+      <PaginationNav itemsShown={10} totalItems={25} />
       <ProgressBar label="Progress bar label" helperText="Optional helper text" value={75} />
       <Slider ariaLabelInput="Lower bound" invalidText="Invalid message goes here" labelText="Slider (must be an increment of 5)" max={100} min={0} step={5} stepMultiplier={5} unstable_ariaLabelInputUpper="Upper bound" value={50} warnText="Warning message goes here" />
     </Stack>
