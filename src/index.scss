@@ -18,3 +18,22 @@
     padding-bottom: 3rem;
 }
 
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('./fonts/IBMPlexSans-Regular.woff2');
+}
+
+.cds--header {
+    background-color: #39414d!important;
+
+    nav {
+        ul {
+            li {
+                a {
+                    background-color: #39414d!important;
+                    color: #f4f4f4;
+                }
+            }
+        }
+    }
+}
